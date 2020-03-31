@@ -5,6 +5,7 @@
     <ProjectReference Include="..\BlabberApp.Domain\BlabberApp.Domain.csproj" />
   </ItemGroup>
 
+  
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
