@@ -1,7 +1,6 @@
 using System;
 using System.Net.Mail;
 using BlabberApp.Domain.Interfaces;
-
 namespace BlabberApp.Domain.Entities
 {
     public class User : IEntity
@@ -28,15 +27,14 @@ namespace BlabberApp.Domain.Entities
                 throw new FormatException("Email is invalid");
             try
             {
-                MailAddress m = new MailAddress(email);
+                MailAddress m = new MailAddress(email); 
             }
             catch (FormatException)
             {
-                throw new FormatException("Email is invalid");
+                throw new FormatException(email + " is invalid");
             }
             Email = email;
         }
-
         public bool IsValid()
         {
             if (this.Id == null) throw new ArgumentNullException();
